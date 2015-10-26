@@ -1,0 +1,1212 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="积累技术, 努力工作, 坚持学习, 认真生活." />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Arccode's blog" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    analytics: {
+      google: 'UA-52770645-1'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?cc881a935ecd2c2a0fe30651210e7117";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <title> Arccode's blog </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Arccode's blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+  <div id="posts" class="posts-expand">
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/03/06/冒泡型事件和捕获型事件/">
+                冒泡型事件和捕获型事件
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-03-06
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Javascript/">Javascript</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/03/06/冒泡型事件和捕获型事件/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/06/冒泡型事件和捕获型事件/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <p>冒泡型事件的基本思想是、事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;<span class="title">head</span>&gt;</span>   </span><br><span class="line">        <span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;/<span class="title">head</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;<span class="title">body</span> <span class="attribute">onclick</span>=<span class="value">"theClick()"</span>&gt;</span>   </span><br><span class="line">        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">onclick</span>=<span class="value">"theClick()"</span>&gt;</span>点击<span class="tag">&lt;/<span class="title">div</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;/<span class="title">body</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/03/06/冒泡型事件和捕获型事件/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/03/01/致我们即将逝去的高中/">
+                致我们即将逝去的高中
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-03-01
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/图集/">图集</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/03/01/致我们即将逝去的高中/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/01/致我们即将逝去的高中/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <p><strong>看见一位朋友画了这篇漫画, 深有体会, 特此转载到该博文, 其实除了高中, 我们的初中又何尝不是如此呢!</strong></p>
+<p><strong>以前我们嚷着不想上课，以后，我们再也不用上课了……</strong></p>
+<h6 id="三年前，懵懂的我们踏进了校园。">三年前，懵懂的我们踏进了校园。</h6><p><img src="/images/cartoon/zhi_gao_zhong_1.jpeg" alt=""></p>
+<h6 id="不解释。">不解释。</h6><p><img src="/images/cartoon/zhi_gao_zhong_2.jpeg" alt=""></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/03/01/致我们即将逝去的高中/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/02/28/图集/">
+                图集
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-02-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/图集/">图集</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/02/28/图集/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/28/图集/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <p><strong>今天看了些图片, 觉得很唯美, 特制作该图集, 用于收集唯美之图</strong></p>
+<h6 id="妈妈(这个世界上最美的女人)">妈妈(这个世界上最美的女人)</h6><p><img src="/images/pics/pic_1.jpg" alt=""></p>
+<h6 id="人生最可悲的事情，莫过于胸怀大志，却又虚度光阴。">人生最可悲的事情，莫过于胸怀大志，却又虚度光阴。</h6><p><img src="/images/pics/pic_2.jpg" alt=""></p>
+<h6 id="用叶子来诠释生命的循环，从诞生到死亡，直至腐烂，人生如是。">用叶子来诠释生命的循环，从诞生到死亡，直至腐烂，人生如是。</h6><p><img src="/images/pics/pic_3.jpg" alt=""></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/02/28/图集/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/02/28/Git-简明指南/">
+                Git-简明指南
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-02-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/版本控制/">版本控制</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/02/28/Git-简明指南/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/28/Git-简明指南/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <p>助你入门 git 的简明指南，木有高深内容 ;)</p>
+<h2 id="安装">安装</h2><p><a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3">下载 git OSX 版</a></p>
+<p><a href="http://msysgit.github.io/">下载 git Windows 版</a></p>
+<p><a href="http://book.git-scm.com/2_installing_git.html">下载 git Linux 版</a></p>
+<h2 id="工作流程图">工作流程图</h2><h3 id="概要">概要</h3><p><img src="/images/git_operate_pic_1.png" alt=""></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/02/28/Git-简明指南/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/02/27/Nginx配置小记/">
+                Nginx配置小记
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-02-27
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/服务器/">服务器</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/02/27/Nginx配置小记/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/27/Nginx配置小记/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <h2 id="背景">背景</h2><p>之前一直使用Apache做静态资源私服及反向代理, 配置稍显复杂, 今天使用nginx来替换Apache, 在此小记一下探索的过程及碰到的问题.</p>
+<h2 id="安装">安装</h2><p>本人使用Mac系统, 偷懒的使用了homebrew, 一键完成了安装. 对于其它<code>OS</code>使用解压<code>zip</code>的方式.</p>
+<p>下面从安装–&gt;配置(静态资源私服 php 反向代理)–&gt;问题展开吧</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/02/27/Nginx配置小记/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/02/26/RESTful最佳实践/">
+                RESTful最佳实践
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-02-26
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/架构/">架构</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/02/26/RESTful最佳实践/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/26/RESTful最佳实践/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <h1 id="背景">背景</h1><p>此文为实践总结，是自己在实践过程中积累的经验和”哲学”。部分内容参考相关资料，参考内容请看尾页。建议对RESTful有一定了解者阅读!</p>
+<h1 id="哲学">哲学</h1><ul>
+<li>不要为了RESTful而RESTful</li>
+<li>在能表达清楚的情况下，简单就是美</li>
+</ul>
+<h1 id="接口路径设计">接口路径设计</h1><h2 id="接口设计原则">接口设计原则</h2><h3 id="URI指向的是唯一的资源对象">URI指向的是唯一的资源对象</h3><p><strong>示例:</strong> 指向ID为<code>yanbo.ai</code>的<code>Account</code>对象</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET http://~/<span class="variable">$version</span>/accounts/yanbo.ai</span><br></pre></td></tr></table></figure>
+<h3 id="URI可以隐式指向唯一的集合列表">URI可以隐式指向唯一的集合列表</h3><p><strong>示例:</strong> 隐式地指向trades list 集合</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET http://~/<span class="variable">$version</span>/trades/(list)</span><br><span class="line">等同于</span><br><span class="line">GET http://~/<span class="variable">$version</span>/trades</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/02/26/RESTful最佳实践/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/02/25/理解本真的REST架构风格/">
+                理解本真的REST架构风格
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-02-25
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/架构/">架构</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/02/25/理解本真的REST架构风格/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/25/理解本真的REST架构风格/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <p>本文是<a href="http://www.infoq.com/cn/rest-deep-dive">“深入探索REST”专栏</a>系列深度内容中的第二篇，它将带您领略REST架构的起源、与Web的关系、REST架构的本质及特性，以及REST架构与其他架构风格之间的比较。</p>
+<h2 id="引子">引子</h2><p>在移动互联网、云计算迅猛发展的今天，作为一名Web开发者，如果您还没听说过“REST”这个buzzword，显然已经落伍了。夸张点说，甚至“出了门都不好意思跟别人打招呼”。尽管如此，对于REST这个泊来品的理解，大多数人（包括一些资深的架构师）仍然停留在“盲人摸象”的阶段。常常听到各种各样关于REST的说法，例如：有人说：“我们这套新的API决定不用Web Service（SOAP+WSDL），而是直接使用HTTP+JSON，也就是用RESTful的方式来开发。” 不用SOAP，甚至也不用XML，就自动变成了RESTful了。还有人认为：REST与传统的 Service其实没有本质区别，只是对于URI的构造方式提出了更多要求，而这些要求Web Service完全都可以实现。潜台词是：既生瑜，何生亮。Web Service已经足够好了，干嘛还要再折腾什么REST。这些对于REST的不同说法，果真如此吗？REST究竟是什么？是一种新的技术、一种新的架构、还是一种新的规范？</p>
+<p>对于这些问题笔者先不解答，为了深入理解REST是什么，我们需要回顾一下Web发展的最初年代，从源头上讲讲REST是怎么得来的。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/02/25/理解本真的REST架构风格/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/02/07/MyBatis-Generator最佳实践/">
+                MyBatis-Generator最佳实践
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-02-07
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Java/">Java</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/02/07/MyBatis-Generator最佳实践/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/07/MyBatis-Generator最佳实践/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <p>最近使用MyBatis开发项目,为了快速开发,发现了一个可快速生成mapper类和mapper配置文件及Model的插件-<code>MyBatis-Generator</code>,总结下该插件的使用及最佳实践.</p>
+<h2 id="需求">需求</h2><ol>
+<li>为数据库中的表teacher生成Teacher.java, TeacherMapper.java, TeacherMapper.xml</li>
+<li>由于该插件生成的TeacherMapper.java, TeacherMapper.xml会带有example, 不希望生成example</li>
+<li>数据库中的字段写有注释, 希望注释能自动生成在Teacher.java中</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/02/07/MyBatis-Generator最佳实践/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/02/04/UltimateAndroid-demo效果图文档/">
+                UltimateAndroid-demo效果图文档
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-02-04
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/02/04/UltimateAndroid-demo效果图文档/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/04/UltimateAndroid-demo效果图文档/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <h1 id="打开该文章前请注意,该文章包含220张图片,合计在10M左右,主要目的为快速查看Demo效果">打开该文章前请注意,该文章包含220张图片,合计在10M左右,主要目的为快速查看Demo效果</h1><p>感谢MarshalChen开源了UltimateAndroid这个快速开发框架, 在此我把各个demo的效果图进行展示, 刚开始学习Android, 不对的解释请留言纠正, 欢迎各位极客加入到这个框架的开发中来.</p>
+<p><a href="https://github.com/cymcsg/UltimateAndroid">项目地址</a></p>
+<p><a href="http://study.163.com/course/introduction.htm?courseId=990020">Android快速开发教程第一季-视频</a></p>
+<p><a href="http://blog.marshalchen.com/ultimateandroiddoc/index.html">API</a></p>
+<p>由于图片太多, 所有把文档分为五部分: </p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-一">UltimateAndroid-demo效果图文档-一</a></p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-二">UltimateAndroid-demo效果图文档-二</a></p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-三">UltimateAndroid-demo效果图文档-三</a></p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-四">UltimateAndroid-demo效果图文档-四</a></p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-五">UltimateAndroid-demo效果图文档-五</a></p>
+<p>在测试过程中有三个Demo在<code>小米3</code>机型上出现程序崩溃的情况:</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">HomeActivity</span></span><br><span class="line">QuickReturnListViewActivity</span><br><span class="line">PasscodePreferencesActivity</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/02/04/UltimateAndroid-demo效果图文档/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/02/03/UltimateAndroid-demo效果图文档-一/">
+                UltimateAndroid-demo效果图文档-一
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-02-03
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Android/">Android</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/02/03/UltimateAndroid-demo效果图文档-一/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/03/UltimateAndroid-demo效果图文档-一/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body fmt">
+
+      
+      
+
+      
+        
+          <p>感谢MarshalChen开源了UltimateAndroid这个快速开发框架, 在此我把各个demo的效果图进行展示, 刚开始学习Android, 不对的解释请留言纠正, 欢迎各位极客加入到这个框架的开发中来.</p>
+<p><a href="https://github.com/cymcsg/UltimateAndroid">项目地址</a></p>
+<p><a href="http://study.163.com/course/introduction.htm?courseId=990020">Android快速开发教程第一季-视频</a></p>
+<p><a href="http://blog.marshalchen.com/ultimateandroiddoc/index.html">API</a></p>
+<p>由于图片太多, 所有把文档分为五部分: </p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-一">UltimateAndroid-demo效果图文档-一</a></p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-二">UltimateAndroid-demo效果图文档-二</a></p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-三">UltimateAndroid-demo效果图文档-三</a></p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-四">UltimateAndroid-demo效果图文档-四</a></p>
+<p><a href="http://arccode.net/2015/02/03/UltimateAndroid-demo效果图文档-五">UltimateAndroid-demo效果图文档-五</a></p>
+<p>在测试过程中有三个Demo在<code>小米3</code>机型上出现程序崩溃的情况:</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">HomeActivity</span></span><br><span class="line">QuickReturnListViewActivity</span><br><span class="line">PasscodePreferencesActivity</span><br></pre></td></tr></table></figure>
+<h2 id="MaterialDesignActivity">MaterialDesignActivity</h2><p>调色板,按钮样式及点击效果,checkbox及switch开关,进度条显示底部snackBar, dialog</p>
+<p><img src="/images/android/material_design_1_1.jpg" alt="1-1 (Views)"></p>
+<p><img src="/images/android/material_design_1_2.jpg" alt="1-2 (Button)"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/02/03/UltimateAndroid-demo效果图文档-一/#more">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+  </div>
+
+  
+  <div class="pagination">
+    <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">&raquo;</a>
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="arccode" />
+          <p class="site-author-name">arccode</p>
+        </div>
+        <p class="site-description motion-element">积累技术, 努力工作, 坚持学习, 认真生活.</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">59</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">58</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="http://arccode.net" target="_blank">Blog</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/arccode" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://weibo.com/tianzhisoftware" target="_blank">Weibo</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://segmentfault.com/u/arccode" target="_blank">Segmentfault</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://lijianhua.baijia.baidu.com" target="_blank">Lijianhua</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+
+      </div>
+
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2014 - 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">arccode</span>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"arccode"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>
