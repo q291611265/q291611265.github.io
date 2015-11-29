@@ -1193,7 +1193,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5bb078;
+  background: #f9e454;
 }
 .sidebar-nav {
   margin: 0;
@@ -1438,6 +1438,22 @@ body {
   padding-top: 10px;
 }
 .posts-expand .post-body img {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 3px;
+  border: 1px solid #ddd;
+}
+.donate {
+  text-align: justify;
+}
+.donate h2,
+.donate h3,
+.donate h4,
+.donate h5,
+.donate h6 {
+  padding-top: 10px;
+}
+.donate img {
   box-sizing: border-box;
   margin: auto;
   padding: 3px;
